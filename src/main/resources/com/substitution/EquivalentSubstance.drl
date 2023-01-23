@@ -1,0 +1,32 @@
+package com.substitution;
+
+import com.substitution.utils.helper.SubstanceEquivalence;
+
+rule "Equivalent amlodipine besilate to Amlodipine "
+	when
+		request: SubstanceEquivalence(_substance.equals("100000090079"))
+	then
+		request.set_response("100000085259");
+end
+
+rule "Equivalent amlodipine mesilate to Amlodipine "
+	when
+		request: SubstanceEquivalence(_substance.equals("100000089571"))
+	then
+		request.set_response("100000085259");
+end
+
+rule "Equivalent amlodipine maleate to Amlodipine "
+	when
+		request: SubstanceEquivalence(_substance.equals("100000089370"))
+	then
+		request.set_response("100000085259");
+end
+
+
+rule "Equivalent SPOR amlodipine to ATC Amlodipine "
+	when
+		request: SubstanceEquivalence(_substance.equals("100000085259"))
+	then
+		request.set_response("C08CA01");
+end
