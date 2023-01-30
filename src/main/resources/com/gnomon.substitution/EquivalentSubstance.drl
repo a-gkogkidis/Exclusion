@@ -1,6 +1,6 @@
-package com.substitution;
+package com.gnomon.substitution;
 
-import com.substitution.utils.helper.SubstanceEquivalence;
+import com.gnomon.substitution.utils.helper.SubstanceEquivalence;
 
 rule "Equivalent amlodipine besilate to Amlodipine "
 	when
